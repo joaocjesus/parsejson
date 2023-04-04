@@ -1,0 +1,78 @@
+table {
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  margin: 20px;
+  vertical-align: middle;
+  margin: auto;
+}
+
+th {
+  padding: 20px;
+  background-color: #475298;
+  color: aliceblue;
+}
+
+tr {
+  border: 1px solid #ddd;
+  white-space: nowrap;
+  background-color: --background-color;
+  position: relative;
+
+}
+
+tr:hover {
+  border: 1px solid #000 !important;
+  white-space: nowrap;
+}
+
+td {
+  padding: 10px 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* text-align: center; */
+  font-size: 0.9em;
+}
+
+td:nth-child(1) {
+  width: 140px;
+}
+
+td:nth-child(2) {
+  width: 540px;
+}
+
+.expandable {
+  color: rgb(20, 52, 159);
+}
+
+.expandable:hover {
+  cursor: pointer;
+}
+
+.expanded {
+  background-color: var(--background-color);
+}
+
+.rowAction {
+  position: absolute;
+  right: 5px;
+  vertical-align: auto;
+}
+
+/* Hide the original title tooltip */
+.long[title] {
+  z-index: 1;
+}
+
+/* Show the title as a tooltip on hover */
+.long[title]:hover::before {
+  content: attr(title);
+  position: absolute;
+  padding: 5px 10px;
+  background-color: rgb(159, 173, 221);
+  border: #000 1px solid;
+  margin-top: -7px;
+  color: black;
+  overflow: visible;
+  z-index: 2;
+}
