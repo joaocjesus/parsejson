@@ -10,7 +10,6 @@ function App() {
       // Fetch the data from the local JSON file and update the state
       const response = await fetch("data.json");
       const json = await response.json();
-      console.log("----" + JSON.stringify(json, null, 2) + "---");
 
       setData(json);
     };
